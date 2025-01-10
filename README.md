@@ -1,4 +1,6 @@
-
+URL OF BACKEND : https://koinxbackend2.onrender.com
+deployed on render
+completed all the 3 tasks, also the additional tasks
 SCREENSHOT OF WORKING DEMO:
 <p><img align="center" src="https://res.cloudinary.com/dflwersfp/image/upload/v1736499396/kx1_ytoffy.jpg" alt="7twik" /></p>
 <p><img align="center" src="https://res.cloudinary.com/dflwersfp/image/upload/v1736499396/kx2_moa3xq.jpg" alt="7twik" /></p>
