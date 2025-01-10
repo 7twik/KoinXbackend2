@@ -1,7 +1,7 @@
 
 SCREENSHOT OF WORKING DEMO:
-<p><img align="center" src="https://asset.cloudinary.com/dflwersfp/c76888bfe9de1aa6dcfe1c01782ad1f3" alt="7twik" /></p>
-<p><img align="center" src="https://asset.cloudinary.com/dflwersfp/0815020ec2dc584cb7f6c2217f975c7a" alt="7twik" /></p>
+<p><img align="center" src="https://res.cloudinary.com/dflwersfp/image/upload/v1736499396/kx1_ytoffy.jpg" alt="7twik" /></p>
+<p><img align="center" src="https://res.cloudinary.com/dflwersfp/image/upload/v1736499396/kx2_moa3xq.jpg" alt="7twik" /></p>
 
 Documentation:
 --------------
