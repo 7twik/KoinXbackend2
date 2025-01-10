@@ -18,6 +18,7 @@ async function update(){
         console.log(d);
         tot=tot.concat({symbol:names[i],currentPrice:d[0].current_price,marketCap:d[0].market_cap,change24h:d[0].price_change_24h});
     }
+    
     for(var i=0;i<tot.length;i++)
     {
         const data=new cryptoSchema(tot[i]);
@@ -46,6 +47,11 @@ async function deviation(req,res){
     }
     var data=await cryptoSchema.find({symbol:coin});
     var sum=0;
+    if(data.length>100)
+    {
+        data=data.slice(data.length-100);
+    }
+    
     for(var i=0;i<data.length;i++)
     {
         sum+=data[i].currentPrice;
