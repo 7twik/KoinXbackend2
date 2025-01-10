@@ -21,7 +21,6 @@ async function update(){
     for(var i=0;i<tot.length;i++)
     {
         const data=new cryptoSchema(tot[i]);
-        const res=await cryptoSchema.findOne({symbol:tot[i].symbol});
             await data.save();
     }
 }
@@ -32,37 +31,32 @@ async function stats(req,res){
         {
             coin=coin.slice(1,coin.length-1);
         }
-    console.log(coin);
+
     var data=await cryptoSchema.find({symbol:coin});
     data=data[data.length-1];
-    console.log(data)
+    
     res.send({price:data.currentPrice,marketCap:data.marketCap,"24hChange":data.change24h});
 }
 
 async function deviation(req,res){
     var coin=req.query.coin;
-    //if coin is wrapped with a "" then remove it
     if(coin[0]=='"'||coin[0]=="'")
     {
         coin=coin.slice(1,coin.length-1);
     }
-    console.log(coin);
     var data=await cryptoSchema.find({symbol:coin});
-    console.log(data);
     var sum=0;
     for(var i=0;i<data.length;i++)
     {
         sum+=data[i].currentPrice;
     }
     var mean=sum/data.length;
-    console.log(mean);
     sum=0;
     for(var i=0;i<data.length;i++)
     {
         sum+=Math.pow(data[i].currentPrice-mean,2);
     }
     var deviation=Math.sqrt(sum/data.length);
-    console.log(deviation);
     res.send({deviation:deviation});
 }
 module.exports={update,stats,deviation};

@@ -14,10 +14,7 @@ app.use(cors());
 cron.schedule('0 */2 * * *', async () => {
     await update();
   });
-// every 10 second
-// cron.schedule('*/10 * * * * *', async () => {
-//     await update();
-//   });
+  
 app.use('/stats',stats);
 app.use('/deviation',deviation);
 
